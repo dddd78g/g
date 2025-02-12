@@ -2,8 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const emailContainer = document.getElementById("email-container");
     const addEmailButton = document.getElementById("add-email");
     const form = document.getElementById("signup-form");
-
-    function addEmailField() {
+ function addEmailField() {
         if (emailContainer.children.length < 5) {
             const div = document.createElement("div");
             div.classList.add("email-input");
@@ -31,11 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     form.addEventListener("submit", function (event) {
         event.preventDefault();
-
         const companyName = document.getElementById("companyName").value;
         const emails = Array.from(document.getElementsByName("emails[]")).map(input => input.value);
 
-        fetch("https://your-n8n-instance/webhook/user-signup", {
+        fetch("https://hichyyy77.app.n8n.cloud/webhook-test/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
